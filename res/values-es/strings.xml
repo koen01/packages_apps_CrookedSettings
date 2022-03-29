@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2022
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Categories -->
+    <string name="themes_title">Temas</string>
+    <string name="lockscreen_title">Pantalla de bloqueo</string>
+    <string name="statusbar_title">Barra de estado</string>
+    <string name="quicksettings_title">Ajustes rápidos</string>
+    <string name="notifications_title">Notificaciones</string>
+    <string name="gestures_title">Gestos</string>
+    <string name="misc_title">Miscelánea</string>
+
+    <!-- General strings -->
+    <string name="default_string">Predeterminado</string>
+    <string name="disabled">Desactivado</string>
+    <string name="enable">Activar</string>
+    <string name="disable">Desactivar</string>
+
+</resources>
