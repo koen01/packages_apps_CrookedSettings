@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-package com.prime.settings.preferences;
+package com.crooked.settings.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -25,14 +25,14 @@ import androidx.preference.PreferenceViewHolder;
 import com.android.settings.R;
 import com.android.settings.Utils;
 
-public class PrimePreference extends Preference {
+public class CrookedPreference extends Preference {
 
     private final View.OnClickListener mClickListener = v -> performClick(v);
 
     private boolean mAllowDividerAbove;
     private boolean mAllowDividerBelow;
 
-    public PrimePreference(Context context, AttributeSet attrs) {
+    public CrookedPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Preference);
@@ -43,10 +43,10 @@ public class PrimePreference extends Preference {
                 R.styleable.Preference_allowDividerBelow, false);
         a.recycle();
 
-        setLayoutResource(R.layout.preference_prime);
+        setLayoutResource(R.layout.preference_crooked);
     }
 
-    public PrimePreference(Context context, View view) {
+    public CrookedPreference(Context context, View view) {
         super(context);
     }
 

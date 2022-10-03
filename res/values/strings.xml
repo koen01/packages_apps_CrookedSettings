@@ -5,8 +5,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Prime Elements -->
-    <string name="primeelements_title" translatable="false">Prime Elements</string>
+    <!-- Crooked Android -->
+    <string name="crookedsettings_title" translatable="false">Crooked Settings</string>
 
     <!-- Categories -->
     <string name="themes_title">Themes</string>

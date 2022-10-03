@@ -2,7 +2,7 @@
  * Copyright (C) 2022
  * SPDX-License-Identifier: Apache-2.0
 */
-package com.prime.settings.fragments;
+package com.crooked.settings.fragments;
 
 import static android.os.UserHandle.USER_SYSTEM;
 
@@ -51,7 +51,7 @@ import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.prime.support.colorpicker.ColorPickerPreference;
+import com.statix.support.colorpicker.ColorPickerPreference;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -87,7 +87,7 @@ public class Themes extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.PRIME_ELEMENTS;
+        return MetricsEvent.BEER;
     }
 
     @Override

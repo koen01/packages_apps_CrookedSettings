@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-package com.prime.settings;
+package com.crooked.settings;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,22 +23,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class PrimeSettings extends SettingsPreferenceFragment {
+public class CrookedSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.prime);
+        addPreferencesFromResource(R.xml.crooked);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.PRIME_ELEMENTS;
+        return MetricsEvent.BEER;
     }
 
     /**
      * For Search
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.prime);
+            new BaseSearchIndexProvider(R.xml.crooked);
 }

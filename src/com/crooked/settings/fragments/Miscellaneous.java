@@ -2,59 +2,50 @@
  * Copyright (C) 2022
  * SPDX-License-Identifier: Apache-2.0
 */
-package com.prime.settings.fragments;
+package com.crooked.settings.fragments;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ContentResolver;
+import android.app.DialogFragment;
 import android.content.Context;
+import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.preference.ListPreference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.PreferenceViewHolder;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.util.prime.PrimeUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.prime.support.preferences.CustomSeekBarPreference;
-import com.prime.support.preferences.SystemSettingListPreference;
-import com.prime.support.preferences.SystemSettingMasterSwitchPreference;
-import com.prime.support.preferences.SystemSettingSwitchPreference;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class Notifications extends SettingsPreferenceFragment implements
+public class Miscellaneous extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.notifications);
+        addPreferencesFromResource(R.xml.misc);
 
         final ContentResolver resolver = getActivity().getContentResolver();
-        final Context mContext = getActivity().getApplicationContext();
         final PreferenceScreen prefSet = getPreferenceScreen();
-        final Resources res = mContext.getResources();
     }
 
     @Override
@@ -65,12 +56,12 @@ public class Notifications extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.PRIME_ELEMENTS;
+        return MetricsEvent.BEER;
     }
 
     /**
      * For Search
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.notifications);
+            new BaseSearchIndexProvider(R.xml.misc);
 }
